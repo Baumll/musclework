@@ -1,19 +1,21 @@
 # ergonomic_assessment
 This repo provides vision-based real-time ergonomic feedback based on the [Rapid Upper Limb Assessment (RULA)](https://doi.org/10.1016/0003-6870(93)90080-S).
 Based on body tracking data, we calculate all relevant joint angles and use them to compute RULA scores.
+This adds the detection of statis and repetive Motions.
 
 # Demo Video
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/GOXe7FzxO5g/0.jpg)](https://www.youtube.com/watch?v=GOXe7FzxO5g)
 
 # Installation
-Clone this forked ROS package into your catkin_ws/src folder.
-The package uses the topic \/body\_tracking\_data from the [Microsoft Azure Kinect ROS driver](https://github.com/leoneversberg/Azure_Kinect_ROS_Driver). 
-This cloned ROS driver version sets the body tracking marker color according to the joint confidence value.
+- You need to have installed this repo: ``https://github.com/ignc-research/ergonomic_assessment``
+
+- load Docker Image ``docker load < musclework_docker_image.tar``
+
 
 
 # Launch ROS
 
-Start ROS via ``roslaunch ergonomic_assessment musclework.launch``
+Start ROS via ``docker run -it --net=host musclework_docker_image:1.0``
 
 
 # Use Rosbags
