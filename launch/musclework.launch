@@ -1,0 +1,3 @@
+<launch>
+	<node name="musclework" pkg="musclework_standalone" type="musclework.py" output="screen" />
+</launch>
