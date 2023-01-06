@@ -6,16 +6,14 @@ This adds the detection of statis and repetive Motions.
 # Demo Video
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/GOXe7FzxO5g/0.jpg)](https://www.youtube.com/watch?v=GOXe7FzxO5g)
 
-# Installation
+# Simplest Installation
+- build the Docker Image: ``docker build -t musclework_docker_image:1.0 .``
 - You need to have installed this repo: ``https://github.com/ignc-research/ergonomic_assessment``
 
-- load Docker Image ``docker load < musclework_docker_image.tar``
-
-
-
 # Launch ROS
+- Start the ergonomic_assessment
+- Then start the Docker file via ``docker run -it --net=host musclework_docker_image:1.0``
 
-Start ROS via ``docker run -it --net=host musclework_docker_image:1.0``
 
 
 # Use Rosbags
